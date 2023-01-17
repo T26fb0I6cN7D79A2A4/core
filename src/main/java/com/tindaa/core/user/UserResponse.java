@@ -6,19 +6,9 @@ public class UserResponse {
   private String fullName;
   private String address;
   private Long phone;
-  private String avatar;
 
   public UserResponse() {
     // default constructor
-  }
-
-  public UserResponse(String uid, String email, String fullName, String address, Long phone, String avatar) {
-    this.uid = uid;
-    this.email = email;
-    this.fullName = fullName;
-    this.address = address;
-    this.phone = phone;
-    this.avatar = avatar;
   }
 
   public String getUid() {
@@ -61,11 +51,4 @@ public class UserResponse {
     this.phone = phone;
   }
 
-  public String getAvatar() {
-    return avatar;
-  }
-
-  public void setAvatar(String avatar) {
-    this.avatar = avatar;
-  }
 }
