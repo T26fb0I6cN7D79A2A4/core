@@ -5,6 +5,9 @@ import java.io.IOException;
 import com.tindaa.core.user.User;
 
 public interface UserRepository {
+
+  public boolean checkIfUserExistByEmail(String email) throws IOException;
+
   public User getUserByUid(String uid) throws IOException;
 
   public User getUserByEmail(String email) throws IOException;

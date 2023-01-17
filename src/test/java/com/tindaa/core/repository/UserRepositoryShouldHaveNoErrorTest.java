@@ -1,6 +1,7 @@
 package com.tindaa.core.repository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -17,7 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.tindaa.core.user.User;
 
 @ExtendWith(value = { MockitoExtension.class })
-public class UserRepositoryTest {
+public class UserRepositoryShouldHaveNoErrorTest {
   @Mock
   private UserRepository fixture;
 
@@ -61,6 +62,16 @@ public class UserRepositoryTest {
     User expected = fixture.updateUser(uid, user);
 
     assertEquals(expected, user);
+  }
+
+  @Test
+  @DisplayName("should check the user if it exist and return true")
+  public void testCheckIfUserExistByEmail() throws IOException {
+    when(fixture.checkIfUserExistByEmail(email)).thenReturn(true);
+
+    boolean expected = fixture.checkIfUserExistByEmail(email);
+
+    assertTrue(expected);
   }
 
   @Test
