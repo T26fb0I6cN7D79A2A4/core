@@ -57,11 +57,12 @@ public class UserRepositoryShouldHaveNoErrorTest {
   @Test
   @DisplayName("should update the user and return User object")
   public void testUpdateUser() throws IOException {
-    when(fixture.updateUser(uid, user)).thenReturn(user);
+    ArgumentCaptor<String> stringCaptor = ArgumentCaptor.forClass(String.class);
+    ArgumentCaptor<User> userCaptor = ArgumentCaptor.forClass(User.class);
 
-    User expected = fixture.updateUser(uid, user);
+    fixture.updateUser(uid, user);
 
-    assertEquals(expected, user);
+    verify(fixture).updateUser(stringCaptor.capture(), userCaptor.capture());
   }
 
   @Test

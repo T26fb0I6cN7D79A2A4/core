@@ -12,7 +12,7 @@ public class UpdateUserInteractor {
     this.repository = repository;
   }
 
-  public User updateUser(String uid, User user) throws IOException {
-    return repository.updateUser(uid, user);
+  public void updateUser(String uid, User user) throws IOException {
+    repository.updateUser(uid, user);
   }
 }

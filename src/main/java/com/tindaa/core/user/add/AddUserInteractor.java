@@ -12,7 +12,7 @@ public class AddUserInteractor {
     this.repository = repository;
   }
 
-  public User add(User user) throws IOException {
-    return repository.addUser(user);
+  public void add(User user) throws IOException {
+    repository.addUser(user);
   }
 }

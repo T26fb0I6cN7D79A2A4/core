@@ -12,9 +12,9 @@ public interface UserRepository {
 
   public User getUserByEmail(String email) throws IOException;
 
-  public User addUser(User user) throws IOException;
+  public void addUser(User user) throws IOException;
 
-  public User updateUser(String uid, User user) throws IOException;
+  public void updateUser(String uid, User user) throws IOException;
 
   public void deleteUser(String uid) throws IOException;
 }

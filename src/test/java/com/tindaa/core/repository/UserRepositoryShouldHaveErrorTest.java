@@ -72,7 +72,7 @@ public class UserRepositoryShouldHaveErrorTest {
   public void testUpdateUser() {
 
     try {
-      when(fixture.updateUser(uid, user)).thenThrow(IOException.class);
+      doThrow(IOException.class).when(fixture).updateUser(uid, user);
 
       fixture.updateUser(uid, user);
 
