@@ -7,20 +7,18 @@ public class User {
   private String fullName;
   private String address;
   private Long phone;
-  private String avatar;
 
   public User() {
     // default constructor
   }
 
-  public User(String password, String uid, String email, String fullName, String address, Long phone, String avatar) {
+  public User(String password, String uid, String email, String fullName, String address, Long phone) {
     this.password = password;
     this.uid = uid;
     this.email = email;
     this.fullName = fullName;
     this.address = address;
     this.phone = phone;
-    this.avatar = avatar;
   }
 
   public String getPassword() {
@@ -71,11 +69,4 @@ public class User {
     this.phone = phone;
   }
 
-  public String getAvatar() {
-    return avatar;
-  }
-
-  public void setAvatar(String avatar) {
-    this.avatar = avatar;
-  }
 }
